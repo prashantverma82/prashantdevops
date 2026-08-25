@@ -26,15 +26,22 @@ jobs:
       - name: Terraform Init
         run: terraform init
         working-directory: ./environment/dev
+        env:
+          TF_LOG: DEBUG
 
       - name: Terraform validate
         run: terraform validate
         working-directory: ./environment/dev
-
+        env:
+          TF_LOG: DEBUG
       - name: Terraform Plan
         run: terraform plan
         working-directory: ./environment/dev
+        env:
+          TF_LOG: DEBUG
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: ./environment/dev
+        env:
+          TF_LOG: DEBUG
