@@ -1,0 +1,25 @@
+rgs = {
+  rg1 = {
+    name     = "vermaji"
+    location = "eastasia"
+  }
+}
+
+vnets = {
+  vnet1 = {
+    name                = "vnet1234"
+    resource_group_name = "vermaji"
+    location            = "eastasia"
+    address_space       = ["10.0.0.0/16"]
+
+  }
+}
+
+subnets = {
+  sub1 = {
+    name                 = "frontend-subnet"
+    resource_group_name  = "vermaji"
+    virtual_network_name = "vnet1234"
+    address_prefixes     = ["10.0.0.1/24"]
+  }
+}
